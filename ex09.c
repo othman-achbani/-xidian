@@ -12,6 +12,14 @@ float	ft_average(int std[][2], int n,int m)
 	}
 	return (av / n);
 }
+float	ft_single_average(int res[][2],int student)
+{
+	int i = -1;
+	float av = 0;
+	while (++i < 3)
+		av += res[student][i];
+	return(av / 3);
+}
 int	main ()
 {
 	int n;
@@ -35,6 +43,12 @@ int	main ()
 	}
 	i = -1;
 	while (++i < 3)
-		printf("the average of the subject number %d  is  %.2f \n",i+1 , ft_average(std, n,i));	
-				
+		printf("the average of the subject number %d  is  %.2f \n",i+1 , ft_average(std, n,i));
+	i = -1;
+	x = 0;
+	while (++i < n)
+	{
+		printf("the average of %s is %f \n" , name[x], ft_single_average(std,x));
+		x++;
+	}
 }
