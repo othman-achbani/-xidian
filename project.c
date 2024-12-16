@@ -37,8 +37,8 @@ int main ()
 		}
 		if(found == 0) // here i check if i already count this string
 		{
-			count++;
 	 		strcpy(checker[count],buffer[k]); // i add the new string to the checker to not count it the next time
+			count++;
 		}
 	}
 	printf("%d", count);
